@@ -27,8 +27,8 @@ class HUDPainter extends CustomPainter {
       ..color = AppConstants.neonBlue.withAlpha(77)
       ..strokeWidth = 1.0;
     const s = 20.0, m = 10.0;
-    canvas.drawLine(Offset(m, m + s), Offset(m, m), paint);
-    canvas.drawLine(Offset(m, m), Offset(m + s, m), paint);
+    canvas.drawLine(const Offset(m, m + s), const Offset(m, m), paint);
+    canvas.drawLine(const Offset(m, m), const Offset(m + s, m), paint);
     canvas.drawLine(Offset(size.width - m - s, m), Offset(size.width - m, m), paint);
     canvas.drawLine(Offset(size.width - m, m), Offset(size.width - m, m + s), paint);
     canvas.drawLine(Offset(m, size.height - m - s), Offset(m, size.height - m), paint);

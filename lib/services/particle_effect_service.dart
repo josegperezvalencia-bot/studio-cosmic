@@ -67,9 +67,9 @@ class ParticleEffectService {
     for (final effect in _activeEffects) {
       switch (effect) {
         case EffectType.spaceParticles:
-          for (int i = 0; i < 50; i++) _particles.add(_randomSpace());
+          for (int i = 0; i < 50; i++) { _particles.add(_randomSpace()); }
         case EffectType.animatedStars:
-          for (int i = 0; i < 80; i++) _particles.add(_randomStar());
+          for (int i = 0; i < 80; i++) { _particles.add(_randomStar()); }
         case EffectType.nebula:
           for (int i = 0; i < 3; i++) {
             final cx = _rng.nextDouble() * _width;
@@ -89,24 +89,23 @@ class ParticleEffectService {
           }
         case EffectType.neonGlow:
           final glowColors = [const Color(0xFF00D4FF), const Color(0xFF8B5CF6), const Color(0xFFFF1493)];
-          for (int i = 0; i < 15; i++) _particles.add(Particle2D(
+          for (int i = 0; i < 15; i++) { _particles.add(Particle2D(
             x: _rng.nextDouble() * _width, y: _rng.nextDouble() * _height,
             vx: (_rng.nextDouble() - 0.5) * 10, vy: (_rng.nextDouble() - 0.5) * 10,
             size: _rng.nextDouble() * 8 + 3, opacity: _rng.nextDouble() * 0.3 + 0.1,
             rotation: 0, color: glowColors[_rng.nextInt(3)],
             life: double.infinity, maxLife: double.infinity, type: ParticleType.glow,
-          ));
+          )); }
         case EffectType.floatingPlanets:
-          final pColors = [const Color(0xFF00D4FF), const Color(0xFF8B5CF6), const Color(0xFFFF1493)];
-          for (int i = 0; i < 3; i++) _particles.add(Particle2D(
+          for (int i = 0; i < 3; i++) { _particles.add(Particle2D(
             x: _rng.nextDouble() * _width, y: _rng.nextDouble() * _height,
             vx: (_rng.nextDouble() - 0.5) * 5, vy: (_rng.nextDouble() - 0.5) * 5,
             size: _rng.nextDouble() * 20 + 10, opacity: 0.8, rotation: _rng.nextDouble() * 6.28,
             color: pColors[_rng.nextInt(3)], life: double.infinity, maxLife: double.infinity,
             type: ParticleType.planet,
-          ));
+          )); }
         case EffectType.meteorShower:
-          for (int i = 0; i < 5; i++) _particles.add(_randomMeteor());
+          for (int i = 0; i < 5; i++) { _particles.add(_randomMeteor()); }
       }
     }
   }

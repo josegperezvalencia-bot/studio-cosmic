@@ -8,7 +8,7 @@ class AppTheme {
     return ThemeData(
       useMaterial3: true,
       brightness: Brightness.dark,
-      colorScheme: ColorScheme.dark(
+      colorScheme: const ColorScheme.dark(
         primary: AppConstants.neonBlue,
         secondary: AppConstants.neonPurple,
         tertiary: AppConstants.neonCyan,

@@ -32,7 +32,7 @@ class EffectCard extends StatelessWidget {
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
           Stack(children: [
             Icon(_getIcon(), color: isActive ? AppConstants.neonBlue : (isLocked ? Colors.grey : Colors.white54), size: 28),
-            if (isLocked) Positioned(right: 0, top: 0, child: Icon(Icons.lock, color: AppConstants.hudAmber, size: 14)),
+            if (isLocked) const Positioned(right: 0, top: 0, child: Icon(Icons.lock, color: AppConstants.hudAmber, size: 14)),
           ]),
           const SizedBox(height: 8),
           Text(effect.label, textAlign: TextAlign.center, style: TextStyle(

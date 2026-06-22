@@ -50,7 +50,7 @@ class _ParticlePainter extends CustomPainter {
           canvas.translate(p.x, p.y);
           canvas.rotate(p.rotation);
           canvas.drawCircle(Offset.zero, p.size, Paint()..color = const Color(0xFFFFB300).withAlpha((p.opacity * 255).toInt()));
-          canvas.drawRect(Rect.fromCenter(center: Offset(-15, 0), width: 30, height: 2),
+          canvas.drawRect(Rect.fromCenter(center: const Offset(-15, 0), width: 30, height: 2),
               Paint()..color = const Color(0xFFFFB300).withAlpha(((p.opacity * 0.3) * 255).toInt())..maskFilter = const MaskFilter.blur(BlurStyle.normal, 4));
           canvas.restore();
         default:
