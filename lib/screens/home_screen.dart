@@ -7,6 +7,7 @@ import '../widgets/parallax_preview.dart';
 import '../widgets/layer_widget.dart';
 import '../widgets/effect_card.dart';
 import '../widgets/export_dialog.dart';
+import '../models/effect_type.dart';
 import '../utils/constants.dart';
 import 'preview_screen.dart';
 import 'ai_generator_screen.dart';
