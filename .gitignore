@@ -16,3 +16,5 @@ android/.gradle/
 *.jar
 *.apk
 *.aab
+devtools_options.yaml
+android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java
