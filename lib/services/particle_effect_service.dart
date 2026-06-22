@@ -97,6 +97,7 @@ class ParticleEffectService {
             life: double.infinity, maxLife: double.infinity, type: ParticleType.glow,
           )); }
         case EffectType.floatingPlanets:
+          final pColors = [const Color(0xFF00D4FF), const Color(0xFF8B5CF6), const Color(0xFFFF1493)];
           for (int i = 0; i < 3; i++) { _particles.add(Particle2D(
             x: _rng.nextDouble() * _width, y: _rng.nextDouble() * _height,
             vx: (_rng.nextDouble() - 0.5) * 5, vy: (_rng.nextDouble() - 0.5) * 5,
