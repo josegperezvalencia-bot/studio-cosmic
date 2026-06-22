@@ -4,7 +4,6 @@ import '../providers/wallpaper_provider.dart';
 import '../providers/sensor_provider.dart';
 import '../providers/particle_provider.dart';
 import '../widgets/particle_canvas.dart';
-import '../models/effect_type.dart';
 import '../utils/constants.dart';
 
 class PreviewScreen extends StatefulWidget {

@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'dart:math';
-import 'package:flutter/material.dart';
 
 class SensorService {
   static final SensorService _instance = SensorService._();

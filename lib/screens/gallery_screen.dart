@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../providers/wallpaper_provider.dart';
-import '../widgets/hud_widgets.dart';
 import '../utils/constants.dart';
 
 class GalleryScreen extends StatelessWidget {
@@ -11,9 +10,7 @@ class GalleryScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final wallpaper = context.watch<WallpaperProvider>();
     return Scaffold(
-      appBar: AppBar(title: const Text('GALERÍA'), actions: [
-        IconButton(icon: const Icon(Icons.refresh), onPressed: () => wallpaper.notifyListeners()),
-      ]),
+      appBar: AppBar(title: const Text('GALERÍA')),
       body: wallpaper.projects.isEmpty
           ? const Center(child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
               Icon(Icons.photo_library_outlined, size: 64, color: Colors.white24),

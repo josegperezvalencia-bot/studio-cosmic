@@ -10,7 +10,7 @@ class WallpaperProvider extends ChangeNotifier {
   final _uuid = const Uuid();
 
   WallpaperProject? _currentProject;
-  List<WallpaperProject> _projects = [];
+  final List<WallpaperProject> _projects = [];
   int _selectedLayerIndex = -1;
 
   WallpaperProject? get currentProject => _currentProject;

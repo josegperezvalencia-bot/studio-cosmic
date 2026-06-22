@@ -1,7 +1,6 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 import '../services/particle_effect_service.dart';
-import '../utils/constants.dart';
 
 class ParticleCanvas extends StatelessWidget {
   final List<Particle2D> particles;
@@ -43,7 +42,7 @@ class _ParticlePainter extends CustomPainter {
           final pp = Paint()..shader = RadialGradient(colors: [p.color, p.color.withAlpha(179), p.color.withAlpha(77)])
               .createShader(Rect.fromCircle(center: Offset.zero, radius: p.size));
           canvas.drawCircle(Offset.zero, p.size, pp);
-          final gp = Paint()..color = p.color.withAlpha(51)..maskFilter = const MaskFilter.blur(BlurStyle.normal, p.size * 0.5);
+          final gp = Paint()..color = p.color.withAlpha(51)..maskFilter = MaskFilter.blur(BlurStyle.normal, p.size * 0.5);
           canvas.drawCircle(Offset.zero, p.size * 1.5, gp);
           canvas.restore();
         case ParticleType.meteor:
